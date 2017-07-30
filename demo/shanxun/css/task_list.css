@@ -1,0 +1,52 @@
+/* time:2013.9.12 */
+
+/* 表格操作列 */
+.task_status{
+	height:12px;
+	width:96px;
+	position:relative;
+	left:50%;
+	margin-left:-48px;
+}
+.task_status span{
+	float:left;
+	margin:0 3px;
+}
+.ie7 .task_status{
+	position:static;
+	margin-left:0px;
+}
+/* 表格下拉 */
+.trLeft{
+	width:80px;
+	float:left;
+	text-align:left;
+}
+.trRight{
+	float:left;
+	word-wrap:break-word;
+	width:500px;
+	text-align:left;
+}
+.tr_span{
+	float:left;
+}
+.tr_must{
+	float:left;
+	color:#e16464;
+	margin-left:22px;
+	display:inline:block;
+}
+/* 地图 */
+.map{
+	width:100%;
+	margin:15px 0 20px 0;
+	min-width:915px;
+}
+.map img{
+	width:100%;
+}
+/* 按钮位置 */
+.task_submit{
+	float:right;
+}

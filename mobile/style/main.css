@@ -1,0 +1,81 @@
+@charset "utf-8";
+
+/**
+ * Created by LrEmo on 10/17/2014.
+ */
+
+
+@font-face {
+    font-family: 'this-moment';
+    src: url('./fonts/this-moment-webfont.eot');
+    src: url('./fonts/this-moment-webfont.eot?#iefix') format('embedded-opentype'),
+    url('./fonts/this-moment-webfont.woff') format('woff'),
+    url('./fonts/this-moment-webfont.ttf') format('truetype'),
+    url('./fonts/this-moment-webfont.svg#SingleMaltaRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.mobile_font{
+    color: #735e59;
+    font-size: 16px;
+    line-height: 1.8;
+}
+.photo{
+    display: block;
+    width: 120px;
+    height: 120px;
+    background: url("./images/photo.jpg") 0 0 repeat;
+    overflow: hidden;
+    border: 4px solid #ccc;
+    border-radius: 50%;
+    position: relative;
+    left: 50%;
+    margin: 20px 0 10px -64px;
+}
+.introduce{
+    width: 100%;
+    text-align: left;
+}
+.align_left{
+    width: 100%;
+    text-align: left;
+}
+.face{
+    font-family: 'this-moment';
+    font-size: 28px;
+}
+.lremo_top20{
+    margin-top: 10px;
+}
+#pc p{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    line-height: 2.0;
+    background:#ADDCE2 url("./images/snow.gif") repeat;
+    display: block;
+    color: #77625D;
+}
+#pc img{
+    width: 100%;
+    display: block;
+}
+/*color*/
+.one{background: #54708c;}
+.two{background: #aa66cc;}
+.three{background: #30bf6c;}
+.four{background: #36a3d9;}
+.five{background: #1bb2b2;}
+/*size*/
+.w-one{width: 25%;}
+.w-two{width: 50%;}
+.w-three{width: 75%;}
+.w-four{width: 100%;}
+#box{margin: 0 auto;max-width: 640px;height: auto;overflow: hidden;}
+.wrap{border: 5px solid #fff;float:left;text-align: center;color: #fff;font-size: 14px;}
+.wrap table{margin-left: 10%;}
+.keywords{
+    width: 100%;
+    overflow: hidden;
+}

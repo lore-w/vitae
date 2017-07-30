@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Lore-w</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=no">
+	<link rel="stylesheet" href="./css/style.css">
+	<script type="text/javascript">
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) {
+                    return;
+                }
+                docEl.style.fontSize = 20 * (clientWidth / 320) + 'px';
+            };
+        if (!doc.addEventListener) {
+            return;
+        }
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+</script>
+</head>
+<body>
+	<div id="wrapper">
+		<div id="new">
+			<span class="title">{{renderData.key}}</span>
+			<span class="explain" v-show="isShow" transition="flip">{{renderData.val}}</span>
+		</div>
+		<div id="operate">
+			<span class="show-detail" @click='showDetFn'>显示释义</span>
+			<span class="btn not-remember" @click='remember(false)'>不记得</span>
+			<span class="btn remember" @click='remember(true)'>记得</span>
+		</div>
+	</div>
+</body>
+<script src="./js/vue.js"></script>
+<script src="./assets/js/main.bundle.js"></script>
+</html>

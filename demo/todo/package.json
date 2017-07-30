@@ -1,0 +1,27 @@
+{
+  "name": "todo",
+  "version": "0.0.1",
+  "description": "todo demo",
+  "keywords": [],
+  "homepage": "",
+  "author": "lore-w <metro-cpu@hotmail.com>",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "bugs": {
+    "url": ""
+  },
+  "licenses": "MIT",
+  "spm": {
+    "main": "index.js",
+    "dependencies": {
+      "jquery": "1.8.3"
+    },
+    "buildArgs": "--include standalone",
+    "output": ["js/**/*.js"],
+    "devDependencies": {
+      "expect.js": "0.3.1"
+    }
+  }
+}

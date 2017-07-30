@@ -1,0 +1,218 @@
+<!DOCTYPE HTML>
+<!--[if lt IE 7]><html lang="en-US" class="ie6"><![endif]-->
+<!--[if IE 7]><html lang="en-US" class="ie7"><![endif]-->
+<!--[if IE 8]><html lang="en-US" class="ie8"><![endif]-->
+<!--[if IE 9]><html lang="en-US" class="ie9"><![endif]-->
+<!--[if gt IE 9]><html lang="en-US"><![endif]-->
+<!--[if !IE]>--><html lang="en-US"><!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+	<title>闪讯管理系统</title>
+	<link rel="stylesheet" type="text/css" href="./css/lremo_reset.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="./css/public.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="./css/task_list.css" media="all" />
+	<script type="text/javascript" src="./js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="./js/lremo.js"></script>
+</head>
+<body id="main_bg" style="min-height:950px;">
+	<div class="mainMargin">
+		<div class="taskTab">
+			<span class="taskTab_active">任务列表</span>
+			<span>添加任务</span>
+		</div>
+		<div class="tabIndex">
+			<div class="check_search">
+				<span class="search_left"></span>
+				<span class="search_right">搜索</span>
+				<div class="search_info">
+					<span class="search_h searchL">姓名:</span>
+					<input class="inputL" type="text" name="" id="" />
+					<span class="search_h searchL">部门:</span>
+					<input class="inputL" type="text" name="" id="" />
+				</div>
+				<div class="search_time">
+					<span class="search_h">时间:</span>
+					<input class="inputT" type="text" name="" id="" />
+					<span class="search_h">到</span>
+					<input class="inputT" type="text" name="" id="" />
+				</div>
+			</div>
+			<table class="tab tab_task" bgcolor="#ffffff" width="100%">
+				<!-- tab控制表格样式
+				tab_task控制js折叠效果 -->
+				<tr class="thead">
+					<td class="no_border_right" width="4%"></td>
+					<td	class="no_border_right" width="10%">部门</td>
+					<td	class="no_border_right" width="8%">姓名</td>
+					<td	class="no_border_right" width="10%">公司信息</td>
+					<td	class="no_border_right" width="8%">联系人</td>
+					<td	class="no_border_right" width="10%">联系电话</td>
+					<td	class="no_border_right" width="10%">拜访时间</td>
+					<td	class="no_border_right" width="10%">签入时间</td>
+					<td	class="no_border_right" width="10%">签出时间</td>
+					<td	class="no_border_right" width="8%">状态</td>
+					<td	class="no_border_right" width="12%">操作</td>
+				</tr>
+				<tr class="trParent">
+					<td>01</td>
+					<td>研发部</td>
+					<td>张晓</td>
+					<td>大贺传媒</td>
+					<td>张晓</td>
+					<td>15212145555</td>
+					<td>2013.8.20&nbsp;&nbsp;5:00</td>
+					<td>2013.8.20&nbsp;&nbsp;5:00</td>
+					<td>2013.8.20&nbsp;&nbsp;5:00</td>
+					<td class="tab_ing">申请中……</td>
+					<td>
+						<div class="task_status">
+							<span class="status1"></span>
+							<span class="status2"></span>
+							<span class="status3"></span>
+							<span class="status4"></span>
+						</div>
+					</td>
+				</tr>
+				<tr class="trParent">
+					<td>01</td>
+					<td>研发部</td>
+					<td>张晓</td>
+					<td>大贺传媒</td>
+					<td>张晓</td>
+					<td>15212145555</td>
+					<td>2013.8.20&nbsp;&nbsp;5:00</td>
+					<td>2013.8.20&nbsp;&nbsp;5:00</td>
+					<td>2013.8.20&nbsp;&nbsp;5:00</td>
+					<td class="tab_ing">申请中……</td>
+					<td>
+						<div class="task_status">
+							<span class="status1"></span>
+							<span class="status2"></span>
+							<span class="status3"></span>
+							<span class="status4"></span>
+						</div>
+					</td>
+				</tr>
+				<tr class="trParent">
+					<td>01</td>
+					<td>研发部</td>
+					<td>张晓</td>
+					<td>大贺传媒</td>
+					<td>张晓</td>
+					<td>15212145555</td>
+					<td>2013.8.20&nbsp;&nbsp;5:00</td>
+					<td>2013.8.20&nbsp;&nbsp;5:00</td>
+					<td>2013.8.20&nbsp;&nbsp;5:00</td>
+					<td class="tab_ing">申请中……</td>
+					<td>
+						<div class="task_status">
+							<span class="status1"></span>
+							<span class="status2"></span>
+							<span class="status3"></span>
+							<span class="status4"></span>
+						</div>
+					</td>
+				</tr>
+				<tr class="trParent">
+					<td>01</td>
+					<td>研发部</td>
+					<td>张晓</td>
+					<td>大贺传媒</td>
+					<td>张晓</td>
+					<td>15212145555</td>
+					<td>2013.8.20&nbsp;&nbsp;5:00</td>
+					<td>2013.8.20&nbsp;&nbsp;5:00</td>
+					<td>2013.8.20&nbsp;&nbsp;5:00</td>
+					<td class="tab_ing">申请中……</td>
+					<td>
+						<div class="task_status">
+							<span class="status1"></span>
+							<span class="status2"></span>
+							<span class="status3"></span>
+							<span class="status4"></span>
+						</div>
+					</td>
+				</tr>
+				<tr class="trParent">
+					<td>01</td>
+					<td>研发部</td>
+					<td>张晓</td>
+					<td>大贺传媒</td>
+					<td>张晓</td>
+					<td>15212145555</td>
+					<td>2013.8.20&nbsp;&nbsp;5:00</td>
+					<td>2013.8.20&nbsp;&nbsp;5:00</td>
+					<td>2013.8.20&nbsp;&nbsp;5:00</td>
+					<td class="tab_ing">申请中……</td>
+					<td>
+						<div class="task_status">
+							<span class="status1"></span>
+							<span class="status2"></span>
+							<span class="status3"></span>
+							<span class="status4"></span>
+						</div>
+					</td>
+				</tr>
+			</table>
+			<div class="pages">
+				<a href="#">首页</a>
+				<a href="#">上一页</a>
+				<a href="#">1</a>
+				<a href="#">2</a>
+				<a href="#">3</a>
+				<a href="#">4</a>
+				<a href="#">5</a>
+				<a href="#">6</a>
+				<a href="#">……</a>
+				<a href="#">下一页</a>
+				<a href="#">尾页</a>
+			</div>
+		</div>
+		<div class="tabIndex">
+			<div class="check_search">
+				<span class="search_left"></span>
+				<span class="search_right">搜索</span>
+				<input type="text" class="search_keyword" value="输入名称、地址、联系人、电话查询" />
+			</div>
+			<div class="auto_write">
+				<ul>
+					<li>
+						<span class="auto_name">公司名称</span>
+						<input class="auto_info" type="text" name="" id="" />
+						<span class="auto_red">*</span>
+					</li>
+					<li>
+						<span class="auto_name">联系人</span>
+						<input class="auto_info" type="text" name="" id="" />
+						<span class="auto_red">*</span>
+					</li>
+					<li>
+						<span class="auto_name">联系电话</span>
+						<input class="auto_info" type="text" name="" id="" />
+						<span class="auto_red">*</span>
+					</li>
+					<li class="long_address">
+						<span class="auto_name">地址</span>
+						<input class="auto_info" type="text" name="" id="" />
+						<span class="auto_red">*</span>
+					</li>
+					<li>
+						<span class="auto_name">外勤人员</span>
+						<input class="auto_info" type="text" name="" id="" />
+						<span class="auto_red">*</span>
+					</li>
+					<li>
+						<span class="auto_name">外勤时间</span>
+						<input class="auto_info" type="text" name="" id="" />
+						<span class="auto_red">*</span>
+					</li>
+				</ul>
+			</div>
+			<div class="map">
+				<img src="./images/map.jpg" alt="这里是地图" />
+			</div>
+			<span class="submit task_submit">提交</span>
+		</div>
+	</div>
+</body>
+</html>

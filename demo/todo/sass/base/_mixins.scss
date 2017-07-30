@@ -1,0 +1,65 @@
+@charset "utf-8";
+
+/**
+ * Created by chenglong.wang@yoho.cn on 2014/12/29.
+ * @description: 自定义混合器
+ */
+
+//------------------------------------------------
+
+/*
+ * @description:用于生成retina下的图片精灵
+ */
+
+@mixin retina-sprite ($map,$sprite,$horizontal: false,$vertical: false) {
+
+  $width: image-width(sprite-file($map, $sprite));
+  $height: image-height(sprite-file($map, $sprite));
+  $offsetY: ceil(nth(sprite-position($map,$sprite),2)/2);
+
+  background: sprite-url($map) 0 $offsetY no-repeat;
+
+  $zoomX: ceil(image_width(sprite-path($map))/2);
+  $zoomY: auto;
+  @include background-size($zoomX $zoomY);
+
+  display: block;
+  width: ceil($width/2)+1;
+  height: ceil($height/2)+1;
+
+
+  $ifabsolute: true;
+
+  @if $horizontal {
+
+    @if $ifabsolute {
+      position: absolute;
+      $ifabsolute: false;
+    }
+
+    @if $horizontal == true {
+      left: 50%;
+      margin-left: -(round($width/4));
+    }
+    @else{
+      left: $horizontal;
+    }
+  }
+
+
+  @if $vertical {
+
+    @if $ifabsolute {
+      position: absolute;
+      $ifabsolute: false;
+    }
+
+    @if $vertical == true {
+      top: 50%;
+      margin-top: -(round($height/4));
+    }
+    @else{
+      top: $vertical;
+    }
+  }
+}

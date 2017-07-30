@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>热词-</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <script src="./js/jquery-1.8.3.min.js"></script>
+    <style>
+        *{margin: 0;padding: 0;
+          -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+        /*color*/
+        .one{background: #54708c;}
+        .two{background: #aa66cc;}
+        .three{background: #30bf6c;}
+        .four{background: #36a3d9;}
+        .five{background: #1bb2b2;}
+        /*size*/
+        .w-one{width: 25%;}
+        .w-two{width: 50%;}
+        .w-three{width: 75%;}
+        .w-four{width: 100%;}
+        #box{margin: 0 auto;max-width: 640px;height: auto;overflow: hidden;}
+        .wrap{border: 5px solid #fff;float:left;text-align: center;color: #fff;font-size: 20px;}
+        .wrap table{margin-left: 10%;}
+    </style>
+    <script>
+        $(function () {
+            //数据准备
+            var d = ['色块宽度根据字数计算','剩余空间放不下下一个色块时','把前一个色块宽度拉长','打算将考虑',
+                     '多少级啊空间大撒旦将萨拉倒萨开裆裤撒娇的了','的萨克将考虑','的萨克拉','打算',
+                     '的撒艰苦的萨克将啊','的萨克将的可是垃圾','的斯卡拉','后经多方考虑尽快','恶趣味请问千万','俄武器',
+                     '额外企鹅屋企恶趣味','额外企鹅屋企俄武器','电风扇','惹我惹我日','惹我特务','额外企鹅屋企',
+                     '额外企鹅屋企恶趣味'
+                ];
+            var thisCol,w;
+            var datas = [];
+            var dataLength = d.length;
+            d[dataLength] = undefined;
+            var allCol = 4;
+            for (var i=0;i<d.length-1;i++) {
+                var thisLength = d[i].length;
+                var nextLength = !!d[i+1]?d[i+1].length:0;
+                var thisNum = actionW(thisLength)[1];
+                var nextNum = actionW(nextLength)[1];
+                datas.push({
+                    "name":d[i],
+                    "w":actionW(thisLength)[0],
+                    "thisCol":thisNum,
+                    "nextCol":nextNum
+                });
+                allCol = allCol - thisNum - nextNum;
+                console.log("第"+(i+1)+"次"+allCol);
+                if (allCol < 0) {
+                    var temp = allCol + nextNum + thisNum;
+                    switch (temp) {
+                        case 1:
+                            datas[i].w = "w-one";
+                            break;
+                        case 2:
+                            datas[i].w = "w-two";
+                            break;
+                        case 3:
+                            datas[i].w = "w-three";
+                            break;
+                        default:
+                            datas[i].w = "w-four";
+                    }
+                    allCol = 4;
+                }else {
+                    allCol = allCol + nextNum;
+                }
+            }
+            function actionW (str) {
+                var w,col;
+                if (str >= 12) {
+                    w = 'w-three';
+                    col = 3;
+                }else if (str >= 6) {
+                    w = 'w-two';
+                    col = 2;
+                }else{
+                    w = 'w-one';
+                    col = 1;
+                }
+                return [w,col];
+            }
+            var oBox = $("#box");
+            for (var i=0;i<datas.length;i++) {
+                var $ciChild = $("<div class='wrap "+datas[i].w+"'>"+
+                                     "<table width='80%' height='100%' cellpadding='0' cellspacing='0'>"+
+                                         "<tr>"+
+                                             "<td>"+
+                                                datas[i].name +
+                                             "</td>"+
+                                         "</tr>"+
+                                     "</table>"+
+                                 "</div>");
+                oBox.append($ciChild);
+            }
+            //设置高度
+            var oWrap = $('.wrap');
+            function resize () {
+                var oW = $("#box").width();
+                oWrap.css({
+                    "height": oW * 0.25
+                });
+            };
+            resize();
+            $(window).resize(function () {
+                resize();
+            });
+            //填充颜色
+            var one = 1;
+            var num = Math.ceil(d.length/5);//应该循环多少次
+            for (var i=0;i<num;i++) {
+                oWrap.eq(i*5).addClass("one");
+                oWrap.eq(i*5+1).addClass("two");
+                oWrap.eq(i*5+2).addClass("three");
+                oWrap.eq(i*5+3).addClass("four");
+                oWrap.eq(i*5+4).addClass("five");
+            }
+        });
+    </script>
+</head>
+<body>
+    <div id="box"></div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+/* time:2013.9.12 */
+
+/* 表格时间颜色 */
+.hours{
+	color:#2e9577;
+}
+.other_ok{
+	display:block;
+	width:16px;
+	height:15px;
+	background:url(../images/icon.png) -116px -104px no-repeat;
+	position:relative;
+	left:50%;
+	margin-left:-8px;
+}
+.other_error{
+	display:block;
+	width:6px;
+	height:16px;
+	background:url(../images/icon.png) -179px -4px no-repeat;
+	position:relative;
+	left:50%;
+	margin-left:-3px;
+}
+.ie7 .other_ok,.ie7 .other_error{
+	position:static;
+}

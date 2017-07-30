@@ -1,0 +1,176 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html, body, #wrapper, #new {
+	display: block;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	color: #000;
+}
+
+@font-face {
+    font-family: 'proxy-webfont';
+    src: url('./fonts/proxy-webfont.eot');
+    src: url('./fonts/proxy-webfont.eot?#iefix') format('embedded-opentype'), 
+           url('./fonts/proxy-webfont.woff') format('woff'), 
+           url('./fonts/proxy-webfont.ttf') format('truetype'), 
+           url('./fonts/proxy-webfont.svg#SingleMaltaRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+#wrapper {
+	position: relative;
+}
+
+.title {
+	width: 100%;
+	text-align: center;
+	font-size: 3rem;
+	height: 3.25rem;
+	line-height: 3.25rem;
+	display: block;
+	font-family: 'proxy-webfont';
+	font-weight: normal;
+}
+.explain {
+	font-size: 0.9rem;
+	margin: 0.2rem 0.75rem 0 0.75rem;
+	display: block;
+	text-align: center;
+	line-height: 1.5;
+}
+
+
+#operate {
+	width: 100%;
+	height: 100%;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+}
+
+.show-detail {
+	height: 2rem;
+	line-height: 2rem;
+	width: 40%;
+	display: block;
+	border: 1px solid #6f5c55;
+	left: 30%;
+	position: absolute;
+	bottom: 7.25rem;
+	font-size: 0.7rem;
+	text-align: center;
+}
+.btn {
+	height: 2.5rem;
+	line-height: 2.5rem;
+	width: 40%;
+	display: block;
+	background: #6f5c55;
+	position: absolute;
+	bottom: 1rem;
+	font-size: 0.7rem;
+	text-align: center;
+	color: #fff;
+}
+.remember {
+	right: 0;
+}
+.not-remember {
+	left: 0;
+}
+
+
+@-webkit-keyframes flip {
+  from {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+
+  40% {
+    -webkit-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+    transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+
+  50% {
+    -webkit-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+    transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  80% {
+    -webkit-transform: perspective(400px) scale3d(.95, .95, .95);
+    transform: perspective(400px) scale3d(.95, .95, .95);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  to {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+}
+
+@keyframes flip {
+  from {
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+
+  40% {
+    -webkit-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+    transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+
+  50% {
+    -webkit-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+    transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  80% {
+    -webkit-transform: perspective(400px) scale3d(.95, .95, .95);
+    transform: perspective(400px) scale3d(.95, .95, .95);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+
+  to {
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+  }
+}
+
+.flip-transition  {
+	-webkit-backface-visibility: visible;
+	backface-visibility: visible;
+	-webkit-animation-name: flip;
+	animation-name: flip;
+
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+}
+
+.flip-enter, .flip-leave {
+	display: none;
+}

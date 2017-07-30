@@ -1,0 +1,380 @@
+<!DOCTYPE HTML>
+<!--[if lt IE 7]><html lang="en-US" class="ie6"><![endif]-->
+<!--[if IE 7]><html lang="en-US" class="ie7"><![endif]-->
+<!--[if IE 8]><html lang="en-US" class="ie8"><![endif]-->
+<!--[if IE 9]><html lang="en-US" class="ie9"><![endif]-->
+<!--[if gt IE 9]><html lang="en-US"><![endif]-->
+<!--[if !IE]>--><html lang="en-US"><!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+	<title>闪讯管理系统</title>
+	<link rel="stylesheet" type="text/css" href="./css/lremo_reset.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="./css/public.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="./css/system.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="./css/calendar.css" media="all" />
+	<script type="text/javascript" src="./js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="./js/lremo.js"></script>
+</head>
+<body id="main_bg" style="min-width:1150px;">
+	<div class="mainMargin">
+		<div class="taskTab">
+			<span class="taskTab_active">公司设置</span>
+			<span>职务管理</span>
+			<span>权限管理</span>
+			<span>操作日志</span>
+			<span>自动拜访结果</span>
+			<span class="tab_end">工作日管理</span>
+		</div>
+		<!-- 公司设置 -->
+		<div class="company_set tabIndex">
+			<ul class="company_set_list">
+				<li>
+					<span class="addPeoN">公司名称</span>
+					<span>:</span>
+					<div class="com_wrap">
+						<input class="addPeo_text" type="text" name="" id="" />
+					</div>
+					<span class="must">*</span>
+				</li>
+				<li>
+					<span class="addPeoN">上班时间</span>
+					<span>:</span>
+					<div class="com_wrap">
+						<input class="addPeo_text" type="text" name="" id="" />
+					</div>
+					<span class="must">*</span>
+				</li>
+				<li>
+					<span class="addPeoN">联系电话</span>
+					<span>:</span>
+					<div class="com_wrap">
+						<input class="addPeo_text" type="text" name="" id="" />
+					</div>
+					<span class="must">*</span>
+				</li>
+				<li>
+					<span class="addPeoN">下班时间</span>
+					<span>:</span>
+					<div class="com_wrap">
+						<input class="addPeo_text" type="text" name="" id="" />
+					</div>
+					<span class="must">*</span>
+				</li>
+				<li class="error_time">
+					<span class="addPeoN">内勤与外勤误差时间</span>
+					<span>:</span>
+					<div class="com_wrap">
+						<input class="addPeo_text" type="text" name="" id="" />
+					</div>
+					<span class="minute">分钟</span>
+					<span class="must">*</span>
+				</li>
+				<li>
+					<span class="addPeoN">手机绑定</span>
+					<span>:</span>
+					<a class="radio" href=""><span class="yes"></span>是</a>
+					<a class="radio" href=""><span class="no"></span>否</a>
+				</li>
+				<li class="company_address">
+					<span class="addPeoN">公司地址</span>
+					<span>:</span>
+					<div class="com_wrap">
+						<input class="addPeo_text" type="text" name="" id="" />
+					</div>
+					<span class="must">*</span>
+					<span class="address_btn">确定</span>
+				</li>				
+			</ul>
+			<div class="system_map">
+				<img src="./images/map.jpg" alt="" />
+			</div>
+		</div>
+		<div class="job tabIndex">
+			<h2 class="mainH2">
+				<span></span><i></i>职位分组</h2>
+			<div class="job_classify">
+				<div class="job_left">
+					<ul>
+						<li class="treeLi_first">
+							<a href=""><span class="peo_icon"></span>研发部</a>
+							<ul class="treeLi_second">
+								<li>努尔哈赤</li>
+								<li>皇太极</li>
+								<li>爱新觉罗.福临</li>
+							</ul>
+						</li>
+						<li class="treeLi_first">
+							<a href=""><span class="peo_icon"></span>销售部</a>
+							<ul class="treeLi_second">
+								<li>张三</li>
+								<li>李四</li>
+								<li>王五</li>
+							</ul>
+						</li>
+						<li class="treeLi_first">
+							<a href=""><span class="peo_icon"></span>策划部</a>
+							<ul class="treeLi_second">
+								<li>爱新觉罗.努尔哈赤</li>
+								<li>12</li>
+								<li>福临</li>
+							</ul>
+						</li>
+						<li class="treeLi_first">
+							<a href=""><span class="peo_icon"></span>人事部</a>
+							<ul class="treeLi_second">
+								<li>张四</li>
+								<li>45</li>
+								<li>李五</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="job_right">
+					<ul>
+						<li>添加部门</li>
+						<li>添加职位</li>
+						<li class="job_del">添加删除</li>
+					</ul>
+				</div>
+			</div>
+			<div class="job_slide add_department">
+				<span class="job_name">部门：</span>
+				<input type="text" name="" class="job_text" id="" />
+				<div class="job_bottom_right">
+					<a class="job_btn" href="">确定</a>
+					<a class="job_btn job_btn_end" href="">取消</a>
+				</div>
+			</div>
+			<!-- <div class="job_slide add_job"></div> -->
+		</div>
+		<div class="power tabIndex">
+			<div class="tab_info">
+				<span class="classify_prev"></span>
+				<span class="classify_next"></span>
+				<span class="classify_add"></span>
+				<div class="box_info">
+					<ul>
+						<li class="act">总经理<span></span></li>
+						<li>人事专员<span></span></li>
+						<li>部门经理<span></span></li>
+						<li>普通员工<span></span></li>
+						<li>总经理<span></span></li>
+						<li>总经理<span></span></li>
+						<li>人事专员<span></span></li>
+						<li>部门经理<span></span></li>
+						<li>普通员工<span></span></li>
+						<li>总经理<span></span></li>
+						<li>总经理<span></span></li>
+					</ul>
+				</div>
+			</div>
+			<div class="classify_list">
+				<ul>
+					<span>任务管理：</span>
+					<li><b class="classify_click"></b>查询权限</li>
+					<li><b></b>删除权限</li>
+					<li><b class="classify_click"></b>操作权限</li>
+					<li><b></b>地图查看</li>
+				</ul>
+				<ul>
+					<span>考勤管理：</span>
+					<li><b></b>查询权限</li>
+					<li><b></b>删除权限</li>
+					<li><b class="classify_click"></b>导出权限</li>
+					<li><b></b>地图查看</li>
+				</ul>
+				<ul>
+					<span>公司管理：</span>
+					<li><b class="classify_click"></b>查询权限</li>
+					<li><b class="classify_click"></b>删除权限</li>
+					<li><b></b>添加权限</li>
+					<li><b></b>修改权限</li>
+					<li><b></b>导出权限</li>
+				</ul>
+				<ul>
+					<span>消息管理：</span>
+					<li><b class="classify_click"></b>查询权限</li>
+					<li><b></b>删除权限</li>
+					<li><b></b>发送权限</li>
+				</ul>
+				<ul>
+					<span>日志管理：</span>
+					<li><b class="classify_click"></b>查询权限</li>
+					<li><b></b>删除权限</li>
+				</ul>
+				<ul>
+					<span>人员管理：</span>
+					<li><b class="classify_click"></b>查询权限</li>
+					<li><b></b>删除权限</li>
+					<li><b></b>添加权限</li>
+					<li><b></b>修改权限</li>
+					<li><b></b>导出权限</li>
+				</ul>
+				<ul>
+					<span>系统设置：</span>
+					<li><b class="classify_click"></b>公司信息修改</li>
+				</ul>
+				<ul class="classify_mar">
+					<span>职务管理</span>
+					<li><b class="classify_click"></b>查询权限</li>
+					<li><b class="classify_click"></b>删除权限</li>
+					<li><b></b>添加权限</li>
+					<li><b></b>修改权限</li>
+				</ul>
+				<ul class="classify_mar">
+					<span>权限管理</span>
+					<li><b></b>修改权限</li>
+				</ul>
+				<ul class="classify_mar">
+					<span>操作日志</span>
+					<li><b></b>查询权限</li>
+				</ul>
+			</div>
+		</div>
+		<div class="log tabIndex">
+			<h2 class="mainH2">
+				<span></span>姓名
+				<div class="log_search">
+					<p>姓名:</p>
+					<input type="" class="log_name" />
+					<p>时间:</p>
+					<input type="" class="log_time" />
+					<p>到</p>
+					<input type="" class="log_time" />
+				</div>
+			</h2>
+			<table class="tab" bgcolor="#ffffff" width="100%">
+				<!-- tab控制表格样式
+				tab_info控制js折叠效果 -->
+				<tr class="thead">
+					<td class="no_border_right" width="5%">编号</td>
+					<td class="no_border_right" width="10%">姓名</td>
+					<td class="no_border_right" width="70%">操作内容</td>
+					<td class="no_border_right" width="15%">操作时间</td>
+				</tr>
+				<tr>
+					<td>***</td>
+					<td>***</td>
+					<td>***</td>
+					<td>***</td>
+				</tr>
+				<tr>
+					<td>***</td>
+					<td>***</td>
+					<td>***</td>
+					<td>***</td>
+				</tr>
+				<tr>
+					<td>***</td>
+					<td>***</td>
+					<td>***</td>
+					<td>***</td>
+				</tr><tr>
+					<td>***</td>
+					<td>***</td>
+					<td>***</td>
+					<td>***</td>
+				</tr>
+				<tr>
+					<td>***</td>
+					<td>***</td>
+					<td>***</td>
+					<td>***</td>
+				</tr>
+			</table>
+			<div class="pages news_page">
+				<a href="#">首页</a>
+				<a href="#">上一页</a>
+				<a href="#">1</a>
+				<a href="#">2</a>
+				<a href="#">3</a>
+				<a href="#">4</a>
+				<a href="#">5</a>
+				<a href="#">6</a>
+				<a href="#">……</a>
+				<a href="#">下一页</a>
+				<a href="#">尾页</a>
+			</div>
+		</div>
+		<div class="auto_result tabIndex">
+			<h2 class="mainH2">
+				<span></span>姓名</h2>
+			<div class="result_add">
+				<input type="text" name="" id="" />
+				<span>添加</span>
+			</div>
+			<table class="tab" bgcolor="#ffffff" width="100%">
+				<!-- tab控制表格样式
+				tab_info控制js折叠效果 -->
+				<tr class="thead">
+					<td class="no_border_right" width="5%">编号</td>
+					<td class="no_border_right" width="80%">操作内容</td>
+					<td class="no_border_right" width="15%">操作时间</td>
+				</tr>
+				<tr>
+					<td>***</td>
+					<td>***</td>
+					<td>***</td>
+				</tr>
+				<tr>
+					<td>***</td>
+					<td>***</td>
+					<td>***</td>
+				</tr>
+				<tr>
+					<td>***</td>
+					<td>***</td>
+					<td>***</td>
+				</tr>
+				<tr>
+					<td>***</td>
+					<td>***</td>
+					<td>***</td>
+				</tr>
+				<tr>
+					<td>***</td>
+					<td>***</td>
+					<td>***</td>
+				</tr>
+			</table>
+			<div class="pages news_page">
+				<a href="#">首页</a>
+				<a href="#">上一页</a>
+				<a href="#">1</a>
+				<a href="#">2</a>
+				<a href="#">3</a>
+				<a href="#">4</a>
+				<a href="#">5</a>
+				<a href="#">6</a>
+				<a href="#">……</a>
+				<a href="#">下一页</a>
+				<a href="#">尾页</a>
+			</div>
+		</div>
+		<div class="work_day tabIndex">
+			<div class="calendar_h">
+				<span class="prev"></span>
+				<span class="next"></span>
+				<div class="calendar_time"></div>
+			</div>
+			<div class="calendar">
+				<table class="calendar_tab_h" align="center" bgcolor="#ffffff" width="95%">
+					<tr>
+						<td width='14%'>周一</td>
+						<td width='14%'>周二</td>
+						<td width='14%'>周三</td>
+						<td width='14%'>周四</td>
+						<td width='14%'>周五</td>
+						<td width='14%'>周六</td>
+						<td width='14%'>周七</td>
+					</tr>
+				</table>
+				<div class="color_tips">
+					<span><b></b>休息日</span>
+					<span><b class="work_tips"></b>工作日</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

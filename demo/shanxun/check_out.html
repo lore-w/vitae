@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<!--[if lt IE 7]><html lang="en-US" class="ie6"><![endif]-->
+<!--[if IE 7]><html lang="en-US" class="ie7"><![endif]-->
+<!--[if IE 8]><html lang="en-US" class="ie8"><![endif]-->
+<!--[if IE 9]><html lang="en-US" class="ie9"><![endif]-->
+<!--[if gt IE 9]><html lang="en-US"><![endif]-->
+<!--[if !IE]>--><html lang="en-US"><!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+	<title>闪讯管理系统</title>
+	<link rel="stylesheet" type="text/css" href="./css/lremo_reset.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="./css/public.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="./css/check_out.css" media="all" />
+	<script type="text/javascript" src="./js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="./js/lremo.js"></script>
+</head>
+<body id="main_bg">
+	<div class="mainMargin">
+		<div class="check_search">
+			<span class="search_left"></span>
+			<span class="search_right">搜索</span>
+			<div class="search_info">
+				<span class="search_h searchL">姓名:</span>
+				<input class="inputL" type="text" name="" id="" />
+				<span class="search_h searchL">部门:</span>
+				<input class="inputL" type="text" name="" id="" />
+			</div>
+			<div class="search_time">
+				<span class="search_h">时间:</span>
+				<input class="inputT" type="text" name="" id="" />
+				<span class="search_h">到</span>
+				<input class="inputT" type="text" name="" id="" />
+			</div>
+		</div>
+		<div class="check_out">
+			<h2 class="mainH2">
+				<b class="excel">导出Excel</b>
+				<span></span><i></i>考勤管理</h2>
+			<table class="tab tab_info" bgcolor="#ffffff" width="100%">
+				<!-- tab控制表格样式
+				tab_info控制js折叠效果 -->
+				<tr class="thead">
+					<td class="no_border_right" width="5%">编号</td>
+					<td class="no_border_right" width="10%">部门</td>
+					<td class="no_border_right" width="10%">姓名</td>
+					<td class="no_border_right" width="15%">考勤状态</td>
+					<td class="no_border_right" width="20%">首次时间</td>
+					<td class="no_border_right" width="20%">最后时间</td>
+					<td class="no_border_right" width="5%">备注</td>
+					<td width="15%">其它信息</td>
+				</tr>
+				<tr class="trParent">
+					<td>01</td>
+					<td>研发部</td>
+					<td>张晓</td>
+					<td>内勤</td>
+					<td>2013-08-20&nbsp;&nbsp;<span class="hours">9:00</span></td>
+					<td>2013-08-20&nbsp;&nbsp;<span class="hours">6:00</span></td>
+					<td><span class="other_ok"></span></td>
+					<td>30条外勤</td>
+				</tr>
+				<tr class="trParent">
+					<td>02</td>
+					<td>研发部</td>
+					<td>张晓</td>
+					<td>内勤</td>
+					<td>2013-08-20&nbsp;&nbsp;<span class="hours">9:00</span></td>
+					<td>2013-08-20&nbsp;&nbsp;<span class="hours">6:00</span></td>
+					<td><span class="other_ok"></span></td>
+					<td>0条外勤</td>
+				</tr>
+				<tr class="trParent">
+					<td>03</td>
+					<td>研发部</td>
+					<td>张晓</td>
+					<td>内勤</td>
+					<td>2013-08-20&nbsp;&nbsp;<span class="hours">9:00</span></td>
+					<td>2013-08-20&nbsp;&nbsp;<span class="hours">6:00</span></td>
+					<td><span class="other_error"></span></td>
+					<td>2条外勤</td>
+				</tr>
+				<tr class="trParent">
+					<td>04</td>
+					<td>研发部</td>
+					<td>张晓</td>
+					<td>内勤</td>
+					<td>2013-08-20&nbsp;&nbsp;<span class="hours">9:00</span></td>
+					<td>2013-08-20&nbsp;&nbsp;<span class="hours">6:00</span></td>
+					<td><span class="other_error"></span></td>
+					<td>10条外勤</td>
+				</tr>
+				<tr class="trParent">
+					<td>05</td>
+					<td>研发部</td>
+					<td>张晓</td>
+					<td>内勤</td>
+					<td>2013-08-20&nbsp;&nbsp;<span class="hours">9:00</span></td>
+					<td>2013-08-20&nbsp;&nbsp;<span class="hours">6:00</span></td>
+					<td><span class="other_error"></span></td>
+					<td>0条外勤</td>
+				</tr>
+			</table>
+		</div>
+		<div class="pages">
+			<a href="#">首页</a>
+			<a href="#">上一页</a>
+			<a href="#">1</a>
+			<a href="#">2</a>
+			<a href="#">3</a>
+			<a href="#">4</a>
+			<a href="#">5</a>
+			<a href="#">6</a>
+			<a href="#">……</a>
+			<a href="#">下一页</a>
+			<a href="#">尾页</a>
+		</div>
+	</div>
+</body>
+</html>

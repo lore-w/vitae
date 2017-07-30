@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>热词</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <script src="./js/jquery-1.8.3.min.js"></script>
+    <script src="./js/jquery.masonry.min.js"></script>
+    <style>
+        *{margin: 0;padding: 0;
+          -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+        /*color*/
+        .one{background: #54708c;}
+        .two{background: #aa66cc;}
+        .three{background: #30bf6c;}
+        .four{background: #36a3d9;}
+        .five{background: #1bb2b2;}
+        /*size*/
+        .w-one{width: 25%;}
+        .w-two{width: 50%;}
+        .w-three{width: 75%;}
+        .w-four{width: 100%;}
+        #box{margin: 0 auto;max-width: 640px;height: auto;overflow: hidden;}
+        .wrap{border: 5px solid #fff;float:left;text-align: center;color: #fff;font-size: 18px;}
+        .wrap table{margin-left: 10%;margin-top: 2%;}
+    </style>
+    <script>
+        $(function () {
+            var data = ['色块宽度与字数无关','色块的宽度在特定的组合中随机生成','大世界肯德基萨拉','打算将考虑',
+                        '多少级啊空间大撒旦将萨拉倒萨开裆裤撒娇的了','的萨克将考虑','的萨克拉','打算',
+                        '的撒艰苦的萨克将啊','的萨克将的可是垃圾','的斯卡拉','后经多方考虑尽快','恶趣味请问千万','俄武器',
+                        '额外企鹅屋企恶趣味','额外企鹅屋企俄武器','电风扇','惹我惹我日','惹我特务','额外企鹅屋企',
+                        '额外企鹅屋企恶趣味'];
+            var aw = [
+                        ['w-one','w-one','w-one','w-one'],
+                        ['w-one','w-one','w-two'],
+                        ['w-one','w-three'],
+                        ['w-two','w-one','w-one'],
+                        ['w-two','w-two'],
+                        ['w-three','w-one']
+                     ];
+            var datas = [];
+            var i = -1;
+            var skip;
+            function loop () {
+                if (i < data.length) {
+                    var rand = Math.floor(Math.random()*6);
+                    var j = -1;
+                    skip = aw[rand].length;
+                    function reloop () {
+                        j++;
+                        if (j < skip) {
+                            i++;
+                            datas.push({
+                                "name":data[i],
+                                "w": aw[rand][j]
+                            });
+                            reloop();
+                        }
+                    }
+                    reloop();
+                    loop();
+                }
+            }
+            loop();
+            var dataEnd = [];
+            for (var i=0;i<datas.length;i++) {
+                if (!!datas[i].name) {
+                    dataEnd.push(datas[i])
+                }
+            }
+            //填充内容
+            var oBox = $("#box");
+            for (var i=0;i<dataEnd.length;i++) {
+                var $ciChild = $("<div class='wrap "+dataEnd[i].w+"'>"+
+                                     "<table width='80%' height='96%' cellpadding='0' cellspacing='0'>"+
+                                         "<tr>"+
+                                             "<td>"+
+                                                   dataEnd[i].name +
+                                             "</td>"+
+                                         "</tr>"+
+                                     "</table>"+
+                                 "</div>");
+                oBox.append($ciChild);
+            }
+            //设置高度
+            var oWrap = $('.wrap');
+            function resize () {
+                var oW = $("#box").width();
+                oWrap.css({
+                    "height": oW * 0.25
+                });
+            };
+            resize();
+            $(window).resize(function () {
+                resize();
+            });
+            //填充颜色
+            var one = 1;
+            var num = Math.ceil(datas.length/5);//应该循环多少次
+            for (var i=0;i<num;i++) {
+                oWrap.eq(i*5).addClass("one");
+                oWrap.eq(i*5+1).addClass("two");
+                oWrap.eq(i*5+2).addClass("three");
+                oWrap.eq(i*5+3).addClass("four");
+                oWrap.eq(i*5+4).addClass("five");
+            }
+        });
+    </script>
+</head>
+<body>
+    <div id="box"></div>
+</body>
+</html>

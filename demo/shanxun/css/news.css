@@ -1,0 +1,181 @@
+/* time:2013.9.12 */
+
+/* 下拉框 */
+.news_slide{
+	padding-bottom:30px;
+	height:auto;
+	position:relative;
+	overflow:hidden;
+	border:5px solid #d5d5d5;
+	background:#ddd;
+	font-size:13px;
+	color:#6b6b6b;
+	font-family:microsoft yahei;
+	visibility:hidden;
+}
+.mail{
+	width:70%;
+	height:100%;
+	float:left;
+}
+.sendTo,.news_content{
+	width:95%;
+	margin-left:5%;
+	height:auto;
+	overflow:hidden;
+	margin-top:15px;
+}
+.sendTo span,.news_content span{
+	display:block;float:left;
+}
+.newsH{
+	width:55px;
+}
+.sendTo ul{
+	width:100%;
+	min-height:29px;
+}
+.sendTo ul li{
+	white-space:nowrap;
+	border-radius:10px;
+	padding:0 8px;
+	margin:5px;
+	float:left;
+	height:19px;
+	line-height:19px;
+	color:#fff;
+	background:#2e9577;
+	position:relative;
+	cursor:pointer;
+}
+.ie7 .sendTo ul li{
+	position:relative;
+	left:5px;
+	behavior:url(pie.htc);
+}
+.people_del{
+	width:10px;
+	height:10px;
+	display:block;
+	position:absolute;
+	right:-3px;
+	top:-3px;
+	background:url(../images/icon.png) -149px -227px no-repeat;
+	cursor:pointer;
+}
+span.people_del:hover{
+	background:url(../images/del.png) no-repeat;
+}
+#main_bg .department{
+	background:#df5858;
+}
+#main_bg .department .sendPeo_left{
+	background-position:-79px -141px;
+}
+#main_bg .department .sendPeo_right{
+	background-position:-89px -141px;
+}
+.news_write{
+	height:130px;
+}
+.mail_setWidth{
+	float:right;
+	background:#fff;
+	border:none;
+	padding:5px 0;
+}
+textarea.mail_setWidth{
+	max-height:130px;
+}
+.news_excel{
+	position:static;
+	float:right;
+	margin-top:20px;
+}
+
+/* 人员列表树 */
+.people_list{
+	width:28%;
+	float:right;
+}
+.people_list h2{
+	margin-top:15px;
+	height:32px;
+	line-height:32px;
+	color:#fff;
+	text-align:center;
+	font-size:15px;
+	background:#2e9577;
+}
+.people_scroll{
+	overflow-y:scroll;
+	height:253px;
+	background:#fff;
+}
+.ie7 .people_scroll{
+	position:relative;
+}
+.treeLi_first{
+	height:auto;
+	overflow:hidden;
+	font-family:microsoft yahei;
+	font-size:13px;
+}
+.treeLi_first a{
+	position:relative;
+	left:0px;
+	top:0px;
+	text-indent:50px;
+	display:block;
+	height:32px;
+	line-height:32px;
+	color:#6b6b6b;
+}
+.peo_icon{
+	position:absolute;
+	top:11px;
+	left:35px;
+	display:block;
+	width:11px;
+	height:11px;
+	background:url(../images/icon.png) -166px -145px;
+}
+.treeLi_second{
+	text-indent:60px;
+	display:none;
+	cursor:pointer;
+}
+.peoList_active{
+	background:#c4eadf;
+}
+.peoList_active .peo_icon{
+	background-position:-179px -145px;
+}
+.add_slide{
+	cursor:pointer;
+	position:absolute;
+	top:17px;
+	right:70px;
+	display:block;
+	width:19px;
+	height:19px;
+	background:url(../images/icon.png) -122px -141px;
+}
+.add_slide_act{
+	background-position:-143px -141px;
+}
+.slide_btn{
+	cursor:pointer;
+	position:absolute;
+	bottom:0px;
+	left:50%;
+	margin-left:-19px;
+	display:block;
+	width:37px;
+	height:20px;
+	background:url(../images/icon.png) -155px -162px;
+}
+.news_page{
+	position:relative;
+	top:-300px;
+}

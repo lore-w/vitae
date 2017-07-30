@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LrEmo's vitae</title>
+    <link rel="stylesheet" href="./style/main.css"/>
+    <script src="./plugin/modernizr.custom.18885.js"></script>
+    <script src="./plugin/sea.js"></script>
+    <script>
+        function is_pc(){
+            var os = new Array("Android","iPhone","Windows Phone","iPod","BlackBerry","MeeGo","SymbianOS");  // 其他类型的移动操作系统类型，自行添加
+            var info = navigator.userAgent;
+            var len = os.length;
+            for (var i = 0; i < len; i++) {
+                if (info.indexOf(os[i]) > 0){
+                    return false;
+                }
+            }
+            return true;
+        };
+        if (!is_pc()) {
+            window.location.href = window.location.href+'mobile/index.html'
+        }
+        seajs.config({
+            alias: {
+                'jquery': '../plugin/jquery',
+                'mousewheel': '../plugin/jquery.mousewheel',
+                'raphael': '../plugin/raphael-min',
+                'jquery.easing': '../plugin/jquery.easing.1.3'
+            }
+        });
+        seajs.use('./js/main.js');
+    </script>
+</head>
+<body>
+    <div id="box">
+        <div id="loading">
+            <span class="loading_top"></span>
+            <div class="loading">
+                <div class="loading_left">
+                    <img src="./style/images/url.png" alt=""/>
+                </div>
+                <div class="loading_right">
+                    素材玩命准备中，如果网络较慢，你也可以先扫面二维码查看移动版本。
+                </div>
+                <span class="btn">Loading……</span>
+            </div>
+        </div>
+        <div class="main">
+            <div class="card lremo">
+                <div class="perspective">
+                    <div class="content">
+                        <div class="photo">
+                            <span class="after">王成龙</span>
+                        </div>
+                        <div class="introduce">
+                            <p>姓名：王成龙</p>
+                            <p>专业：计算机应用</p>
+                            <p>年龄：27</p>
+                            <p>学历：专科</p>
+                            <p>电话：188 5124 1801</p>
+                            <p>邮箱：in.sea@Foxmail.com</p>
+                            <p>工龄: 4+年（前端）</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--关于我 end-->
+            <div class="card info">
+                <div class="perspective">
+                    <div class="content">
+                        <h2>工作能力</h2>
+                        <div class="card_info">
+                            <ol>
+                                <li>1、对web标准和标签语义化有深入理解，能写出结构良好且语义清晰的html文档</li>
+                                <li>2、了解可用性、可访问性等相关知识，了解渐进增强与优雅降级等</li>
+                                <li>3、熟悉前端自动化构建、前端性能优化</li>
+                                <li>4、热爱全栈技术，具备良好的编码习惯，优秀的学习能力</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--基本信息 end-->
+            <div class="card skills">
+                <div class="perspective">
+                    <div class="content">
+                        <h2>技术堆栈</h2>
+                        <div class="card_info tips">
+                            <div class="tips_left">
+                                <!-- <ul>
+                                    <li>1、精通web标准，对标签语义化有深入理解，了解可用性、可访问性等</li>
+                                    <li>2、了解数据交互，与服务端分工协作</li>
+                                    <li>3、有webapp开发经验，熟悉appframework、jqueryMobile</li>
+                                </ul> -->
+                                html(5)、css(3)、javascript（es6）、ajax、sass、compass、Postcss
+   Node、mongodb、react、git、grunt、gulp...
+                            </div>
+                            <div class="tips_right raphael">
+                                <dl>
+                                    <dt>javascript</dt>
+                                    <dd class="javascript"></dd>
+                                    <dt>html/css</dt>
+                                    <dd class="css"></dd>
+                                    <dt>photoshop</dt>
+                                    <dd class="ps"></dd>
+                                </dl>
+                                <div id="raphael"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--工作技能 end-->
+            <div class="card experience">
+                <div class="perspective">
+                    <div class="content">
+                        <h2>工作经验</h2>
+                        <div class="card_info">
+                            <dl>
+                                <dt>1、沭阳三剑客网络公司</dt>
+                                <dd>table布局阶段，web标准摸索中</dd>
+                                <dt>2、南京凯义通信息技术有限公司</dt>
+                                <dd>web标准布局阶段，js提升中</dd>
+                                <dt>3、南京随身云信息技术有限公司</dt>
+                                <dd>侧重js阶段，接触数据交互、性能优化、模块化编程等</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--工作经验 end-->
+            <div class="card about">
+                <div class="perspective">
+                    <div class="content">
+                        <h2>项目经验</h2>
+                        <div class="card_info">
+                            <!-- <p class="code_tip">审查源码请戳下面的链接：</p> -->
+                            <ul>
+                                <!-- <li><a target="_blank" href="./js/main.js">main.js（各功能模块调用）</a></li>
+                                <li><a target="_blank" href="./js/box_3d.js">box_3d.js（旋转立方体）</a></li>
+                                <li><a target="_blank" href="./js/parallax.js">parallax.js（视差效果）</a></li>
+                                <li><a target="_blank" href="./js/style.js">style.js（动态样式）</a></li>
+                                <li><a target="_blank" href="./js/raphael.js">raphael.js（环形图）</a></li> -->
+                                <li>0、YOHOBUY、YOHOBOYS、YOHOBUY大数据统计...</li>
+                                <li>1、中华万年历（web）</li>
+                                <li>2、南京客运站信息查询系统</li>
+                                <li>3、南京军区水文所政工网</li>
+                                <li>4、栖霞U+智能小区管理系统</li>
+                                <li>...</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--关于源码 end-->
+            <div class="card other">
+                <div class="perspective">
+                    <div class="content">
+                        <h2>Last</h2>
+                        <div class="card_info tips">
+                            <div class="w50 pull-left img-center">
+                                <h4>本站移动端请扫二维码</h4>
+                            <img class="qrcode" src="./style/images/url.png" alt=""/>
+                            </div>
+                            <div class="w50 pull-left img-center">
+                                <h4>Node项目演示(admin  123)</h4>
+                            <img class="qrcode" src="http://7xrieq.com1.z0.glb.clouddn.com/node-qr.png" alt=""/>
+                            </div>
+                            <!-- <div class="tips_left">
+                                <ul>
+                                    <li>1、使用html5、css3</li>
+                                    <li>2、使用seajs模块化编写</li>
+                                    <li>3、使用modernizr.js对低版本浏览器优雅降级（兼容ie7及以上）</li>
+                                    <li>other、你也可以扫描二维码浏览本站的移动版本</li>
+                                </ul>
+                            </div>
+                            <div class="tips_right">
+                                <img src="./style/images/url.png" alt=""/>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--关于本站 end-->
+        </div>
+        <!--main end-->
+    </div>
+    <!--box end-->
+</body>
+</html>

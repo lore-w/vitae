@@ -1,0 +1,351 @@
+@charset "utf-8";
+
+/*!
+ *author:
+ *modify: 
+ *time:2013.11.21
+*/
+
+/* head */
+#header{
+	width:100%;
+	height:682px;
+	background:url(../images/index.jpg) center top repeat-x;
+	min-width:960px;
+}
+.top_bar{
+	width:100%;
+	height:89px;
+	background:url(../images/top_opacity.png) repeat-x;
+	position:absolute;
+	left:0;
+	top:0;
+	min-width:960px;
+}
+.header_box{
+	height:100%;
+	width:940px;
+	margin:0 auto;
+	z-index:10;
+	position:relative;
+}
+.top{
+	width:100%;
+	height:89px;
+}
+.logo{
+	width:127px;
+	height:28px;
+	background:url(../images/logo_white.png) no-repeat;
+	text-indent:-8888px;
+	float:left;/* important */
+	margin-top:30px;
+}
+.nav{
+	float:right;
+	height:89px;
+}
+.nav li{
+	float:left;
+	height:12px;
+	line-height:12px;
+	margin-top:38px;
+	border-right:1px dashed #fff;
+	overflow:hidden;
+	font-family:\u9ed1\u4f53;
+	position:relative;
+}
+.nav li a,.nav li span{
+	display:block;
+	font-size:12px;
+	margin:0 15px;
+	height:100%;
+	text-align:center;
+}
+.nav li a{
+	color:#c8435a;
+	position:absolute;
+	top:12px;
+	left:0px;
+	_left:15px;
+}
+.nav li span{
+	color:#fff;
+	cursor:pointer;
+	float:left;  /* 修复ie6下bug */
+}
+#header .active span{
+	color:#c8435a;
+}
+.nav li a:hover{
+	text-decoration:none;
+}
+#nav_end{
+	border-right:none;
+}
+.banner{
+	height:517px;
+	position:absolute;
+	left:0;
+	bottom:0;
+	width:100%;
+	overflow:hidden;	/* important 修复ie6下bug */
+}
+.banner_img{
+	margin-left:10px;
+	margin-right:38px;
+	float:left;
+	display:inline-block;
+	font-size:14px;
+}
+.banner_main{
+	overflow:hidden;
+	font-family:"microsoft yahei";
+}
+.banner_h{
+	margin-top:28px;
+}
+.banner_main ul{
+	margin-top:20px;
+}
+.banner_main ul li{
+	color:#fff;
+	line-height:25px;
+}
+.download{
+	margin-top:40px;
+}
+.download a{
+	margin-right:50px;
+	display:inline-block;
+	height:72px;
+}
+.code{
+	margin-top:40px;
+}
+.code img{
+	float:left;
+}
+.code p{
+	margin:80px 0 0 20px;
+	color:#fff;
+	overflow:hidden;
+	float:left;
+}
+/* 主体内容 */
+#box{
+	width:100%;
+	min-width:960px;
+	margin-top:30px;
+}
+#box_other{
+	width:960px;
+	margin:0 auto;
+	min-width:960px;
+	position:relative;
+}
+.item_list{
+	width:100%;
+	height:auto;
+	overflow:hidden;
+	/* margin:18px auto; */
+}
+.list_even{
+	background:#f8f8f8;
+}
+.item{
+	height:340px;
+	overflow:hidden;
+	margin:0 auto;
+	width:960px;
+}
+.special{
+	height:340px;
+}
+.special .special_img{
+	margin-top:45px;
+}
+.item_img{
+	float:left;
+	margin-left:85px;
+}
+.item_pull_right .item_img{
+	float:right;
+	margin-right:25px;
+}
+.item_content{
+	overflow:hidden;/* 开启BFC */
+	margin-top:100px;
+	text-indent:35px;
+}
+.item_content img{
+	margin-left:35px;
+	_margin-left:0;
+}
+.item_pull_right .item_content{
+	text-indent:100px;
+}
+.item_pull_right .item_content img{
+	margin-left:100px;
+	_margin-left:0;
+}
+.item_content h2{
+	font-size:46px;
+	color:#7a7d7e;
+	font-weight:normal;
+}
+.item_content h2 span{
+	color:#f21500;
+}
+.item_content p{
+	font-size:18px;
+	color:#666;
+}
+.clear{
+	clear:both;
+}
+/* footer */
+#footer{
+	width:100%;
+	height:65px;
+	padding-top:35px;
+	margin-top:50px;
+	background:url(../images/footer.gif) repeat-x;
+	min-width:960px;
+}
+#footer p{
+	width:100%;
+	text-align:center;
+	color:#fff;
+	font-size:12px;
+}
+
+/* 关于我们 */
+#other #header{
+	height:82px;
+	background:url(../images/top.gif) repeat-x;
+}
+#other .nav li span{
+	color:#ff7b00;
+}
+#other #header .active span{
+	color:#c8435a;
+}
+#other .logo{
+	background:url(../images/logo_orange.jpg) no-repeat;
+}
+.other_banner{
+	margin-top:20px;
+}
+.article{
+	margin-top:28px;
+	overflow:hidden;
+}
+.article h2,.article h3{
+	color:#3ab5c4;
+	font-family:microsoft yahei;
+	font-size:32px;
+	font-weight:normal;
+}
+.article h3{
+	font-size:16px;
+}
+.about_us,.our_address{
+	font-size:14px;
+	color:#666;
+	margin-top:20px;
+	line-height:25px;
+}
+/* 卖家入住 */
+#other #box{
+	position:relative;
+}
+.seller_introduce{
+	position:absolute;/* 向右浮动失败，被导航的下部挡住 */
+	right:10px;
+	top:55px;
+}
+.seller_art{
+	width:405px;
+}
+.seller_btn{
+	display:block;
+	width:124px;
+	height:29px;
+	background:url(../images/seller_btn.jpg) no-repeat;
+	color:#fff;
+	text-align:center;
+	line-height:29px;
+	font-size:14px;
+	cursor:pointer;
+}
+.seller_position{
+	margin-top:10px;
+}
+.fature_list{
+	margin-top:40px;
+	height:210px;
+}
+.fature_list ul{
+	height:auto;
+	overflow:hidden;
+}
+.fature_list ul li{
+	float:left;
+	margin-right:48px;
+}
+#fature_list_end{
+	margin-right:0;
+}
+.fature_list ul li h3{
+	margin-top:10px;
+	color:#434343;
+	font-size:16px;
+}
+/* 合作商铺 */
+#cooperative_shop{
+	width:940px;
+	margin:40px auto 55px auto;
+	background:#eee;
+	padding-bottom:20px;
+}
+#cooperative_shop h2{
+	font-size:16px;
+	color:#666;
+	margin:0 2%;
+	position:relative;
+	top:10px;
+	height:25px;
+}
+.shop_list{
+	overflow:hidden;
+	margin-top:20px;
+}
+.shop_list ul{
+	width:16%;
+	float:left;
+	margin:0 2%;
+	display:inline-block;
+	overflow:hidden;
+}
+.shop_list ul li{
+	font-size:14px;
+	color:#959595;
+	line-height:20px;
+}
+/* 随手客服 */
+#chat{
+	width:150px;
+	height:200px;
+	background:url(../images/chat.png) no-repeat;
+	position:absolute;
+}
+#chat a{
+	display:block;
+	width:77px;
+	height:22px;
+	background:url(../images/qq.gif) no-repeat;
+	position:absolute;
+	bottom:0;
+	left:39px;
+}

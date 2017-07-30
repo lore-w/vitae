@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LrEmo's vitae</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta content="telephone=no" name="format-detection" />
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <link rel="stylesheet" type="text/css" href="./css/af.ui.css"  />
+    <link rel="stylesheet" type="text/css" href="./css/icons.css"  />
+    <link rel="stylesheet" type="text/css" href="./style/main.css"  />
+
+    <script type="text/javascript" charset="utf-8" src="./js/appframework.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="./ui/appframework.ui.js"></script>
+    <script type="text/javascript" charset="utf-8" src="./plugins/af.slidemenu.js"></script>
+    <script type="text/javascript" charset="utf-8" src="./js/main.js"></script>
+
+    <script>
+        $.ui.useOSThemes=false;
+        if (!((window.DocumentTouch && document instanceof DocumentTouch) || 'ontouchstart' in window)) {
+            var script = document.createElement("script");
+            script.src = "./plugins/af.desktopBrowsers.js";
+            var tag = $("head").append(script);
+            //$.os.desktop=true;
+        };
+        $.ui.ready(
+            function(){
+                //$.ui.removeFooterMenu();
+            }
+        );
+    </script>
+</head>
+<body>
+    <div id="afui" class="ios">
+        <div id="content">
+            <div id="home" class="panel" title="Hello，o(^▽^)o" selected="true" data-footer="public_footer" data-tab="nav_home">
+                <div class="photo"></div>
+                <div class="introduce mobile_font">
+                    /**<br />
+                    &nbsp;*我叫<b>王成龙</b>，热爱code，热爱前端…<br />
+                    &nbsp;*对新兴技术有狂热追求…<br />
+                    &nbsp;*/<br />
+                    if&nbsp;(interested in me)&nbsp;{<br />
+                    &nbsp;&nbsp;//可以通过以下方式找到我！<br />
+                    &nbsp;&nbsp;var Email = 'in.sea@Foxmail.com';<br />
+                    }&nbsp;else&nbsp;{<br />
+                    &nbsp;&nbsp;return;<br />
+                    }<br />
+                </div>
+            </div>
+            <div id="info" class="panel" title="基本信息" data-footer="public_footer" data-tab="nav_info">
+                <ol class="lremo_top20 align_left mobile_font">
+                    <li>/**</li>
+                    <li>*@Name:王成龙</li>
+                    <li>*@Tel:18851241801</li>
+                    <li>*@Email:in.sea@Foxmail.com</li>
+                    <li>*@Work-Age:4+年</li>
+                    <li>*@Age:27</li>
+                    <!--<li>*@Tel:<b class="face">186-0526-9243</b></li>-->
+                    <li>*/</li>
+                </ol>
+            </div>
+            <div id="skills" class="panel" title="工作技能" data-footer="public_footer" data-tab="nav_skills">
+                <ul class="lremo_top20 align_left mobile_font">
+                    <li>0、对web标准和标签语义化有深入理解，能写出结构良好且语义清晰的html文档</li>
+                    <li>1、了解可用性、可访问性等相关知识，了解渐进增强与优雅降级等</li>
+                    <li>2、熟悉前端自动化构建、前端性能优化</li>
+                    <li>3、热爱全栈技术，具备良好的编码习惯，优秀的学习能力</li>
+                    <li>4、技术堆栈</li>
+                    <div class="keywords"></div>
+                </ul>
+            </div>
+            <div id="experience" class="panel" title="工作经验" data-footer="public_footer">
+                <dl class="lremo_top20 align_left mobile_font">
+                    <dt>1、沭阳三剑客网络公司</dt>
+                    <dd>table布局阶段，web标准摸索中</dd>
+                    <dt>2、南京凯义通信息技术有限公司</dt>
+                    <dd>web标准布局阶段，js提升中</dd>
+                    <dt>3、南京随身云信息技术有限公司</dt>
+                    <dd>侧重js阶段，接触数据交互、性能优化、模块化编程等</dd>
+                    <dt>4、YOHO!有货（江苏）商贸服务有限公司</dt>
+                    <dd>前端自动化构建、node、react、js深入中...</dd>
+                </dl>
+            </div>
+            <div id="pc" class="panel" title="PC版本" data-footer="public_footer">
+                <p class="lremo_top20 align_left mobile_font">
+                    PC端访问相同地址:<br />http://vitae.sinaapp.com查看更酷的版本吧~</p>
+                    <img src="./style/images/pc_1.jpg" alt=""/>
+                    <img src="./style/images/pc_2.jpg" alt=""/>
+                    <img src="./style/images/pc_3.jpg" alt=""/>
+                    <img src="./style/images/pc_4.jpg" alt=""/>
+                    <img src="./style/images/pc_5.jpg" alt=""/>
+                    <img src="./style/images/pc_6.jpg" alt=""/>
+            </div>
+            <nav>
+                <ul class="list">
+                    <li class="divider">LrEmo's vitae</li>
+                    <li><a href="#home">首页</a></li>
+                    <li><a href="#info">基本信息</a></li>
+                    <li><a href="#skills">工作技能</a></li>
+                    <li><a href="#experience">工作经验</a></li>
+                    <li><a href="#pc">PC版本</a></li>
+                </ul>
+            </nav>
+            <div id="footer"></div>
+            <footer id="public_footer">
+                <a id="nav_home" class="icon home" href="#home">Home</a>
+                <a id="nav_info" class="icon info" href="#info">About</a>
+                <a id="nav_skills" class="icon js" href="#skills">Skills</a>
+                <a id="nav_experience" class="icon target" href="#experience">Experience</a>
+                <a id="nav_pc" class="icon settings" href="#pc">PC</a>
+            </footer>
+        </div>
+    </div>
+</body>

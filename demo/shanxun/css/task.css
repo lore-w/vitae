@@ -1,0 +1,35 @@
+/* time:2013.9.12 */
+
+.table_task{
+	margin:30px 0 20px 0;
+}
+.tab_ok{
+	color:#2e9577;
+}
+.tab_ing{
+	color:#e48c02;
+}
+.other_ok{
+	display:block;
+	width:22px;
+	height:1px;
+	background:url(../images/icon.png) -113px -92px no-repeat;
+	position:relative;
+	left:50%;
+	margin-left:-11px;
+}
+.ie7 .other_ok{
+	position:static;
+}
+.other_error{
+	display:block;
+	width:6px;
+	height:16px;
+	background:url(../images/icon.png) -179px -4px no-repeat;
+	position:relative;
+	left:50%;
+	margin-left:-3px;
+}
+.ie7 .other_error{
+	position:static;
+}

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>todo demo</title>
+    <link rel="stylesheet" href="./css/todo.css"/>
+</head>
+<body>
+    <div id="wrap">
+        <!--头部-->
+        <header class="todo-header">
+            <h2 class="todo-title">Todos</h2>
+        </header>
+        <!--内容-->
+        <div class="todo-content">
+            <input class="todo-input" type="text" placeholder="What needs to be done?">
+            <div class="toggle-all none">
+                <input type="checkbox" class="select">
+                <lable>Select All</lable>
+            </div>
+            <ul class="todo-items"></ul>
+        </div>
+        <!--页脚-->
+        <footer class="todo-footer none">
+            <span class="complete-num"></span>
+            <span class="clear-item"></span>
+        </footer>
+    </div>
+    <script src="./dist/todo/0.0.1/js/index.js"></script>
+</body>
+</html>
